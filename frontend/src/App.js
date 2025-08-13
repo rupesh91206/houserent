@@ -4,12 +4,12 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
-import HouseList from './components/HouseList';
-import AddHouse from './components/AddHouse';
-import HouseDetail from './components/HouseDetail';
-import MyProperties from './components/MyProperties';
-import EditHouse from './components/EditHouse';
-import Bookings from './components/Bookings';
+import MovieList from './components/MovieList';
+import AddMovie from './components/AddMovie';
+import MovieDetail from './components/MovieDetail';
+import MyMovies from './components/MyMovies';
+import EditMovie from './components/EditMovie';
+import MyTickets from './components/MyTickets';
 import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,23 +26,23 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/houses" element={<HouseList />} />
+              <Route path="/movies" element={<MovieList />} />
               <Route
-                path="/add-house"
+                path="/add-movie"
                 element={
                   <PrivateRoute>
-                    <AddHouse />
+                    <AddMovie />
                   </PrivateRoute>
                 }
               />
-              <Route path="/houses/:id" element={<HouseDetail />} />
-              <Route path="/my-properties" element={<MyProperties />} />
-              <Route path="/edit-house/:id" element={<EditHouse />} />
+              <Route path="/movies/:id" element={<MovieDetail />} />
+              <Route path="/my-movies" element={<MyMovies />} />
+              <Route path="/edit-movie/:id" element={<EditMovie />} />
               <Route
-                path="/bookings"
+                path="/my-tickets"
                 element={
                   <PrivateRoute>
-                    <Bookings />
+                    <MyTickets />
                   </PrivateRoute>
                 }
               />

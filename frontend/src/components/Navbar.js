@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
         <Link className="navbar-brand" to="/">
-          House Rental
+          🎬 MovieTix
         </Link>
         <button
           className="navbar-toggler"
@@ -28,28 +28,28 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link className="nav-link" to="/houses">
-                Browse Houses
+              <Link className="nav-link" to="/movies">
+                Browse Movies
               </Link>
             </li>
             {user && user.role === 'owner' && (
               <>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/add-house">
-                    Add House
+                  <Link className="nav-link" to="/add-movie">
+                    Add Movie
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/bookings">
-                    Property Bookings
+                  <Link className="nav-link" to="/my-movies">
+                    My Movies
                   </Link>
                 </li>
               </>
             )}
-            {user && user.role !== 'owner' && (
+            {user && (
               <li className="nav-item">
-                <Link className="nav-link" to="/bookings">
-                  My Bookings
+                <Link className="nav-link" to="/my-tickets">
+                  My Tickets
                 </Link>
               </li>
             )}
