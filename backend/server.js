@@ -36,13 +36,13 @@ app.use('/uploads', express.static(uploadsDir, {
 }));
 
 // Import routes
-const houseRouter = require('./routes/house.routes');
+const movieRouter = require('./routes/movie.routes');
 const userRouter = require('./routes/auth.routes');
-const bookingRouter = require('./routes/booking.routes');
+const ticketRouter = require('./routes/ticket.routes');
 
-app.use('/api/houses', houseRouter);
+app.use('/api/movies', movieRouter);
 app.use('/api/auth', userRouter);
-app.use('/api', bookingRouter);
+app.use('/api', ticketRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

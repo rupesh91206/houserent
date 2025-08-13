@@ -7,28 +7,30 @@ const Home = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const handleListProperty = () => {
+  const handleManageMovies = () => {
     if (!user) {
       navigate('/login');
     } else {
-      navigate('/my-properties');
+      navigate('/my-movies');
     }
   };
 
   return (
     <div className="home">
       <div className="hero-section text-center">
-        <h1 className="display-4 mb-4">Find Your Perfect Home</h1>
+        <h1 className="display-4 mb-4">🎬 Book Your Movie Tickets</h1>
         <p className="lead mb-4">
-          Browse through our extensive collection of rental properties
+          Discover the latest movies and book your tickets instantly
         </p>
         <div className="cta-buttons">
-          <Link to="/houses" className="btn btn-primary btn-lg me-3">
-            Browse Houses
+          <Link to="/movies" className="btn btn-primary btn-lg me-3">
+            Browse Movies
           </Link>
-          <button onClick={handleListProperty} className="btn btn-outline-primary btn-lg">
-            List Your Property
-          </button>
+          {user && user.role === 'owner' && (
+            <button onClick={handleManageMovies} className="btn btn-outline-primary btn-lg">
+              Manage Movies
+            </button>
+          )}
         </div>
       </div>
 
@@ -36,23 +38,23 @@ const Home = () => {
         <div className="row">
           <div className="col-md-4">
             <div className="feature-card text-center p-4">
-              <i className="bi bi-house-door feature-icon"></i>
-              <h3>Wide Selection</h3>
-              <p>Browse through various properties that match your needs</p>
+              <i className="bi bi-film feature-icon"></i>
+              <h3>Latest Movies</h3>
+              <p>Watch the newest releases in high-quality theaters</p>
             </div>
           </div>
           <div className="col-md-4">
             <div className="feature-card text-center p-4">
-              <i className="bi bi-shield-check feature-icon"></i>
-              <h3>Verified Listings</h3>
-              <p>All our listings are verified for your peace of mind</p>
+              <i className="bi bi-ticket-perforated feature-icon"></i>
+              <h3>Easy Booking</h3>
+              <p>Select your seats and book tickets in just a few clicks</p>
             </div>
           </div>
           <div className="col-md-4">
             <div className="feature-card text-center p-4">
-              <i className="bi bi-cash feature-icon"></i>
-              <h3>Best Prices</h3>
-              <p>Find properties that fit your budget</p>
+              <i className="bi bi-star feature-icon"></i>
+              <h3>Premium Experience</h3>
+              <p>Enjoy movies with state-of-the-art sound and visuals</p>
             </div>
           </div>
         </div>
