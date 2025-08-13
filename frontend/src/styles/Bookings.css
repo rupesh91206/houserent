@@ -1,0 +1,91 @@
+.bookings-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.bookings-container h1 {
+  margin-bottom: 2rem;
+}
+
+.bookings-list {
+  margin-top: 2rem;
+}
+
+.booking-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.booking-header h3 {
+  margin: 0;
+}
+
+.booking-header h3 a {
+  color: #333;
+  text-decoration: none;
+}
+
+.booking-header h3 a:hover {
+  color: #007bff;
+}
+
+.booking-details {
+  color: #666;
+}
+
+.booking-details p {
+  margin: 0.5rem 0;
+}
+
+.booking-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-tabs {
+  margin-bottom: 2rem;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-bookings p {
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.no-bookings .btn {
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+}
