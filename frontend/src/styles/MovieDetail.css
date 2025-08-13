@@ -1,0 +1,365 @@
+.movie-detail {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-header {
+  margin-bottom: 3rem;
+}
+
+.movie-poster {
+  position: relative;
+}
+
+.image-carousel img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.image-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+  background: #007bff;
+  border-color: #007bff;
+}
+
+.movie-info h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.movie-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rating-badge {
+  background: #28a745;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.duration, .year {
+  color: #666;
+  font-weight: 500;
+}
+
+.genre-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.genre-tag {
+  background: #007bff;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.director, .cast {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.theater-info {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.theater-info h5 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Showtimes */
+.showtimes-section h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.showtimes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.showtime-card {
+  background: white;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.showtime-card:hover {
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.showtime-card.selected {
+  border-color: #007bff;
+  background: #e3f2fd;
+}
+
+.showtime-date {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.showtime-time {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 0.5rem;
+}
+
+.showtime-screen {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.showtime-price {
+  font-weight: bold;
+  color: #28a745;
+  font-size: 1.1rem;
+}
+
+/* Seat Selection */
+.seat-selection h3 {
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.screen-indicator {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.screen {
+  background: linear-gradient(90deg, #333, #666, #333);
+  color: white;
+  padding: 0.5rem 3rem;
+  border-radius: 50px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+}
+
+.screen::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 10px solid #666;
+}
+
+.seat-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.row-label {
+  font-weight: bold;
+  color: #666;
+  width: 20px;
+  text-align: center;
+}
+
+.seats {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.seat {
+  width: 35px;
+  height: 35px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.seat.available:hover {
+  border-color: #007bff;
+  background: #e3f2fd;
+}
+
+.seat.selected {
+  background: #007bff;
+  color: white;
+  border-color: #0056b3;
+}
+
+.seat.booked {
+  background: #dc3545;
+  color: white;
+  border-color: #c82333;
+  cursor: not-allowed;
+}
+
+.seat.premium {
+  border-color: #ffc107;
+}
+
+.seat.premium.available {
+  background: #fff3cd;
+}
+
+.seat-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-item .seat {
+  width: 20px;
+  height: 20px;
+  cursor: default;
+  font-size: 0.6rem;
+}
+
+.booking-summary {
+  background: white;
+  border: 2px solid #007bff;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.summary-details h5 {
+  color: #007bff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.summary-details p {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.btn-lg {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .movie-detail {
+    padding: 1rem;
+  }
+  
+  .movie-info h1 {
+    font-size: 2rem;
+  }
+  
+  .showtimes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .seat-map {
+    padding: 1rem;
+  }
+  
+  .seat {
+    width: 30px;
+    height: 30px;
+    font-size: 0.6rem;
+  }
+  
+  .seat-legend {
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .booking-summary {
+    padding: 1rem;
+  }
+}
